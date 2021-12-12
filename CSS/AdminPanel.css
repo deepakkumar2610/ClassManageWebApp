@@ -1,0 +1,155 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box;   */
+}
+
+html {
+    font-family: 'Baloo Da 2', cursive;
+    
+    /* background-color: black; */
+}
+
+.leftside {
+    width: 18vw;
+    height: 100vh;
+    position: absolute;
+    float: left;
+    /* background-color: blanchedalmond; */
+}
+
+    .leftside .adminpanel {
+        width: 18vw;
+        height: 30vh;
+        display: grid;
+        align-items: center;
+        background-image: linear-gradient(to bottom right, #007bff, #10a2b8);
+        position: relative;
+    }
+
+.edit_profile {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    color: #fff;
+}
+
+.leftside .adminpanel img {
+    width: 5vw;
+    height: auto;
+    margin-bottom: 0.7rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background-color:white;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background-color:darkgray;
+}
+
+
+    /* Handle on hover */
+
+    ::-webkit-scrollbar-thumb:hover {
+        background:gray;
+    }
+
+.sidenav a {
+    text-decoration: none;
+    font-size:14px;
+    font-style:normal;
+    padding: 8px 10px !important;
+    color: #000;
+}
+
+    .sidenav a:hover {
+        background-image: linear-gradient(to bottom right, #007bff, #10a2b8);
+        color: white;
+        /* width: 100% !important; */
+    }
+
+.sidenav .align_side {
+    display: block;
+    background-color: lightgray;
+}
+
+.nav_link {
+    display: flex;
+    align-items: center;
+}
+
+.topdivcontent {
+    width: 85vw;
+    height: 10vh;
+    /*margin-top: 0.74rem;*/
+}
+
+.noti_log a {
+    text-decoration: none;
+    color: #fff;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.notification {
+    position: relative;
+}
+
+.noti_log .indicate {
+    position: absolute;
+    top: -8px;
+    left: 1.2rem;
+    border-radius: 50%;
+}
+
+.top_side {
+    float: right;
+    width: 82vw;
+    height: 10vh;
+    text-align: center;
+    align-items: center;
+}
+.top_side .search {
+    width:50px; 
+}
+.mainpannel {
+    /* position: absolute; */
+    float: right;
+    width: 82vw;
+    height: 90vh;
+    /*background: #e6e6e6;*/
+}
+
+
+/* Small display css part */
+
+@media(min-width:320px), (min-height:568px) {
+    .leftside {
+        display: none;
+    }
+}
+
+@media(min-width:425px) {
+    .leftside {
+        display: block;
+    }
+}

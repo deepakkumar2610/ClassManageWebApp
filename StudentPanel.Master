@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentPanel.master.cs" Inherits="ClassManageApp.StudentPanel" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>KriSons | Student Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Boostrap cdn Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Material Icons Links -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+    </style>
+    <link href="CSS/AdminPanel.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form id="form2" runat="server">
+
+        <div>
+            <div class="leftside">
+
+                <div class="right_logopart d-flex p-2" style="background-color: rgba(0,50,100,.8); width: 18vw; height: 10vh;">
+                    <div class="ml-1">
+                        <img src="./IMG/krisons.jpg" style="width: 45px; height: auto; border-radius: 50%; border: 2px solid maroon">
+                    </div>
+                    <div>
+                        <div class="ml-2" style="font-size: 2.5rem; font-family: monospace; color: #d9d9d9; text-shadow: 5px 0px 0px maroon;"><b>KriSons</b></div>
+                    </div>
+                </div>
+
+
+                <div class="adminpanel">
+                    <div class="panel_align text-light mx-3">
+                        <img src="IMG/admin_logo.png" alt="">
+                        <div class="name"><small>First Middle Last</small></div>
+                        <div class="email"><small>admin@gmail.com</small></div>
+                    </div>
+                    <a href="#" class="edit_profile" data-toggle="tooltip" title="Edit Profile" data-placement="top">
+                        <span class="material-icons">edit</span>
+                    </a>
+                </div>
+                <div class="sidenav bg-light">
+                    <div class="align_side  nav nav-tabs pt-1" style="overflow-y: scroll; height: 59.8vh">
+                        <a href="ManageClassNPage.aspx" class="nav_link ">
+                            <span class="material-icons mr-3 ">color_lens</span>Manage Class
+                        </a>
+                        <a href="Students.aspx" class="nav_link">
+                            <span class="material-icons mr-3 active">supervisor_account</span>Students
+                        </a>
+                        <a href="attendance.aspx" class="nav_link ">
+                            <span class="material-icons mr-3 ">check_box</span>Attendance
+                        </a>
+                        <a href="#" class="nav_link  border-bottom">
+                            <span class="material-icons mr-3">chrome_reader_mode</span>Enquiry Details
+                        </a>
+
+                        <small class="text-muted p-2">Manage Fees</small>
+
+                        <a href="#" class="nav_link ">
+                            <span class="material-icons mr-3">receipt</span>Fees Details
+                        </a>
+                        <a href="#" class="nav_link  border-bottom">
+                            <span class="material-icons mr-3">payment</span>Fees Payment
+                        </a>
+
+
+                        <small class="text-muted m-2">Staff</small>
+
+                        <a href="#" class="nav_link ">
+                            <span class="material-icons mr-3">add_box</span>Add Staff
+                        </a>
+                        <a href="#" class="nav_link ">
+                            <span class="material-icons mr-3">perm_contact_calendar</span>Staff Details
+                        </a>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="top_side d-flex justify-content-around" style="background-color: rgba(0,50,100,.8);">
+                <div class="text-light text-left p-2 text-center border" style="margin-right: 50px; width: 25rem; border-radius: 5px; cursor: default;">
+                    Welcome, Admin Deepak Vishwakarma
+                </div>
+                <div class="form-inline " style="margin-right: 50px;">
+                    <asp:TextBox ID="TextBox1" runat="server" class="form-control  mr-sm-2" placeholder="Search" aria-label="Search" Style="background-color: #e6e6e6;"></asp:TextBox>
+                    <asp:Button ID="TopSearch" runat="server" Text="Search" class="btn btn-outline-light my-2 my-sm-0" />
+                </div>
+
+                <div class="noti_log  d-flex" style="margin-right: 50px;">
+                    <a class="notification d-flex" href="#"><span class="material-icons">notifications</span>
+                        <span class="indicate badge badge-danger">0</span>
+                    </a>
+                </div>
+                <div class="noti_log  d-flex">
+                    <a href="Home.php ">
+                        <span class="material-icons">exit_to_app
+                        </span>Logout
+                    </a>
+                </div>
+            </div>
+            <div class="container mainpannel bg-light" style="overflow-y: scroll">
+                <!-- <div class="container Note_dash text-dark bg-success">
+            <marquee behavior="" direction="">
+                Note: Please check (Mr.Deepak Vishwakarma) Fees and Payment Details!!!
+            </marquee>
+        </div> -->
+
+                <!-- This is our Manage Class -->
+                <%--<div class="container row bg-light border tab-pane mt-1 active"  id="manage_class">
+                
+                <div class=" d-lg-12 d-md-12 container-fluid text-light bg-primary p-2">
+                
+                    Student
+                
+                
+                </div>           
+            
+            
+            
+            
+            
+            </div>    
+        <!-- This Is Our Student Class     -->
+            <div class="container card bg-danger border tab-pane" id="student"> 
+                This is Our Students class dashboard.
+            </div>    --%>
+                <%--<div>--%>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <%--</div>--%>
+            </div>
+        </div>
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,270 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeWebPanel.master.cs" Inherits="ClassManageApp.HomeWebPanel" 
+    EnableViewState="true"%>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+<!-- Boostrap cdn Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Material Icons Links -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+    </style>
+
+    <link href="CSS/HomeWebPanelStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+	<!-- display Top bar on large Screen -->
+      <div class="container-fluid d-none d-md-block ">
+		<div class="topbar row  text-center  py-2">
+
+			<div class="col-lg-4 col-md-4 border-right" ;>
+				<a class="text-dark px-1" href="#">
+					<span><i class="fas fa-envelope text-warning"></i> krisons@gmail.com</span>
+				</a>
+			</div>
+
+			<div class="col-lg-4 col-md-4 border-right" ;>
+				<a class="text-dark px-1" href="#">
+					<span><i class="fas fa-phone-alt text-success"></i> +91 123456789
+					</span>
+				</a>
+			</div>
+
+			<div class="col-lg-4 col-md-4 " ;>
+				<!-- <span class="loginstyle border" type="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+				<%--<a class="text-dark px-1" id="login" href="#">--%>
+				<span class="loginstyle border border-info" >
+					<%--<a class="text-dark px-1" id="login" href="#">Login</a>--%>
+		<%--here using the boostrap popup modal--%>
+                    <a class="text-info"  data-toggle="modal" data-target=".bd-modal-sm"><i class="fas fa-user text-info"></i> Login </>
+		<%--here is the modal content--%>
+                    <div class="modal fade bd-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="popupModal modal-content text-center">
+                                    <div class="card-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 5px; right: 10px;">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <img src="IMG/login.png" />
+                                    </div>
+									<a href="LoginForm.aspx" class="border-bottom p-1 mb-4" style="text-decoration: none; color: rgba(0,50,100,.8);">Admin</a>
+<%--                                    <a href="#" class="border-bottom p-1 text" style="text-decoration: none; color: rgba(0,50,100,.8);">Staff</a>
+                                    <a href="#" class="border-bottom p-1" style="text-decoration: none; color: rgba(0,50,100,.8);">Student</a>
+                                    <a href="#" class="p-1" style="text-decoration: none; color: rgba(0,50,100,.8);">Parent</a>--%>
+								</div>
+                            </div>
+                        </div>    
+				</span>
+			</div>
+
+			<!-- <span class="loginstyle px-2 border"> <label class="mt-1 "><i class="fas fa-user"></i></label>	
+				<small>	 <a class="text-dark " href="login.php">Login</a></small>
+				</div> -->
+
+		</div>
+	</div>
+
+<!-- display Top bar on small Screen  -->
+	<div class="container-fluid ">
+		<div class="row text-center d-md-none  py-2">
+			<div class="col-4 border-right" ;>
+				<span class=""><a href="#"><i class="fas fa-envelope text-warning "></i></a></span>
+				<!-- <small> <a class="text-dark" href="#">krisons@gmail.com</a></small> -->
+			</div>
+			<div class="col-4 border-right" ;>
+				<span class=""><a href="#"><i class="fas fa-phone-alt text-success"></i></a></span>
+				<!-- <small> <a class="text-dark" href="#">+91 9702414732</a></small> -->
+			</div>
+			<div class="col-4" ;>
+		<%--	here is the popup modal for small device--%>
+				<a class="text-info"  data-toggle="modal" data-target=".bd-example-modal-sm"><i class="fas fa-user text-info"></i></a>
+<%--				<span class="px-1"><a class="text-info"  data-toggle="modal" data-target=".bd-example-modal-sm" id="login_smdevice"><i class="fas fa-user text-primary"></i></a></span>--%>
+		<%--here is the modal content code--%>
+				<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="popupModal modal-content text-center">
+                                    <div class="card-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 5px; right: 10px;">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <img src="IMG/login.png" />
+                                    </div>
+									<a href="#" class="border-bottom p-1 mb-4" style="text-decoration: none; color: rgba(0,50,100,.8);">Admin</a>
+<%--                                    <a href="#" class="border-bottom p-1 text" style="text-decoration: none; color: rgba(0,50,100,.8);">Staff</a>
+                                    <a href="#" class="border-bottom p-1" style="text-decoration: none; color: rgba(0,50,100,.8);">Student</a>
+                                    <a href="#" class="p-1" style="text-decoration: none; color: rgba(0,50,100,.8);">Parent</a>--%>
+								</div>
+                            </div>
+                        </div>
+				<!-- <small> <a class="text-dark" href="#">+91 9702414732</a></small> -->
+			</div>
+		</div>
+	</div>
+
+<!-- NavBar Code -->
+	<nav class="navbar navbar-expand-lg navbar-dark " id="nav">
+		<!-- <div class="navbar-brand">
+				<img src="./img/krisons.jpg" style="width:50px; height:auto; border-radius: 50%;border:2px solid maroon">
+			</div>
+			<div class="">
+				<h class="mr-1" style="  font-size:2.5rem; font-family:monospace;color:#d9d9d9;text-shadow: 5px 0px 0px maroon;"><b>KriSons</b></h>
+			</div> -->
+        <a href="HomePage.aspx" style="text-decoration: none;">
+            <div class="navbar-brand right_logopart  d-flex">
+                <div class="m-auto">
+                    <img src="./img/krisons.jpg" style="width: 50px; height: auto; border-radius: 50%; border: 2px solid maroon" />
+                </div>
+                <div class="m-auto">
+                    <div class="ml-1" style="font-size: 2.5rem; /* line-height: 82px; */ font-family: monospace; color: #d9d9d9; text-shadow: 5px 0px 0px maroon;"><b>KriSons</b></div>
+                </div>
+            </div>
+        </a>
+		<div class="navbar-toggler"  style="color:#d9d9d9;" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="material-icons">menu</span>
+		<%--	<span class="material-icons p-1" style="font-size: 30px;">menu</span>--%>
+		</div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item  mr-4 border-1 ">
+                    <a class="nav-link text-light" href="HomePage.aspx"><i class=" fas fa-home mr-2"></i>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-4">
+                    <%--<a class="nav-link text-light" href="addEnquiryModal.aspx"><i class="fa fa-plus-square mr-2"></i>Add Enquiry</a>--%>
+         <%--here is the modal link code--%>
+                    <a class="nav-link text-light" data-toggle="modal" data-target="#addEnquiryModal" style="cursor: pointer;"><i class="fa fa-plus-square mr-2"></i>Add Enquiry</a>
+         <%--HERE is the add enquiry page modal code--%>
+                    <div class="modal" id="addEnquiryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Enquiry Page</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="full-name" class="col-form-label">Name:</label>
+                                            <asp:TextBox runat="server" ID="txten_name" type="text" class="form-control form-control-sm" placeholder="Full Name"></asp:TextBox>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Phone:</label>
+                                            <asp:TextBox runat="server" ID="txten_mobile" class="form-control form-control-sm" placeholder="Mobile Number"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Email:</label>
+                                            <asp:TextBox runat="server" ID="txten_email" type="email" class="form-control form-control-sm" placeholder="ex-abc@gmail.com"></asp:TextBox>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                                    <asp:Button runat="server" ID="SubmitEnquiry" CssClass="btn btn-outline-primary" Text="Submit" OnClick="SubmitEnquiry_Click" />
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li>
+                    <%--<a class="nav-link mr-4 text-light" href="PreAdmissionForm.aspx"><i class=" fas fa-address-book mr-2"></i>Pre Admission</a>--%>
+        <%--here is the modal link part--%>
+                    <a class="nav-link mr-4 text-light" data-toggle="modal" data-target="#myModal" style="cursor: pointer;"><i class="fa fa-plus-square mr-2"></i>Pre Admission</a>
+        <%--here is the modal content code--%>
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Pre Admission</h4>
+                                    <button class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="full-name" class="col-form-label">Name:</label>
+                                        <asp:TextBox runat="server" ID="PreAdFname" type="text" class="form-control form-control-sm" placeholder="Full Name"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="PreAdMname" type="text" class="form-control form-control-sm mt-2" placeholder="Middle Name"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="PreAdLname" type="text" class="form-control form-control-sm mt-2" placeholder="Last Name"></asp:TextBox>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Phone:</label>
+                                        <asp:TextBox runat="server" ID="PreAdNumber" class="form-control form-control-sm" placeholder="Mobile Number"></asp:TextBox>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Email:</label>
+                                        <asp:TextBox runat="server" ID="PreAdEmail" type="email" class="form-control form-control-sm" placeholder="ex-abc@gmail.com"></asp:TextBox>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label>Standard</label>
+                                        <asp:DropDownList ID="ddlStandard" runat="server" type="text" class="form-control form-control-sm">
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Section</label>
+                                        <asp:DropDownList ID="ddlSection" runat="server" type="text" class="form-control form-control-sm">
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Batch</label>
+                                        <asp:DropDownList ID="ddlBatch" runat="server" type="text" class="form-control form-control-sm">
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                                    <asp:Button runat="server" ID="PreadSubmit" CssClass="btn btn-outline-primary" Text="Submit" OnClick="PreadSubmit_Click" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item mr-4">
+                    <a class="nav-link text-light" href="Contact.aspx"><i class=" fas fa-phone-square-alt mr-2"></i>Contact</a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a class="nav-link text-light" href="About.aspx"><i class=" fas fa-bars mr-2"></i>About</a>
+                </li>
+
+            </ul>
+        </div>
+	</nav>
+
+<%--This Is Our Content Div--%>
+		<div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+         <div class="container-fluid text-light"  style="background:rgba(0,50,100,.8);">
+            <p class="py-2 text-center">Copyright &copy 2021 Education, Inc. All rights reserved.</p>
+        </div>
+    </form>
+</body>
+</html>

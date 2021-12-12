@@ -1,0 +1,234 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#logopart {
+    color: white;
+    font-size: 2.5rem;
+    /* line-height: 82px; */
+    font-family: monospace;
+    color: #d9d9d9;
+    text-shadow: 5px 0px 0px maroon;
+    /* padding: 8px; */
+}
+
+/* background: orange; */
+
+#nav {
+    background-color: rgba(0,50,100,.8);
+    font-family: 'Baloo Da 2', cursive;
+}
+
+/* Anchor tag for top bar */
+.topbar a {
+    text-decoration: none;
+    font-family: 'Baloo Da 2', cursive;
+    color: white;
+}
+
+
+.loginstyle {
+    border-radius: 5px;
+    padding: 1px 20px 4px 20px;
+}
+    .loginstyle a{
+        cursor:pointer;
+    }
+    /* login modal part */
+    /*.bg_modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal_content {*/
+    /* width: 20vw; */
+    /* height: 40vh; */
+    /*background-color: whitesmoke;
+    position: absolute;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px;
+}*/
+    /*img {
+    width: 5vw;
+    height: 10vh;
+}
+
+.modal_content a {
+    text-decoration: none;
+}
+*/
+    /*.login_option {
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom right, #007bff, #10a2b8);
+}*/
+    /*.modal_content .close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    transform: rotate(45deg);
+}*/
+    /* This is Media Query Code for Small Devices */
+    @media (max-width:767px) {
+        .modal_content {
+        width: 70vw;
+        height: 45vh;
+        background-color: white;
+        position: absolute;
+        border-radius: 4px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    img {
+        width: 18vw;
+        height: 10vh;
+    }
+}
+
+@media (min-width:768px) {
+    .modal_content {
+        width: 30vw;
+        height: 45vh;
+    }
+
+    img {
+        width: 7vw;
+    }
+}
+
+@media (min-width:1024px) {
+    .modal_content {
+        width: 15vw;
+        height: 42vh;
+    }
+
+    img {
+        width: 5vw;
+        height: 10vh;
+    }
+}
+/*.dropdown-toggle::after{
+    display: none;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+*/
+#attend {
+    font-family: 'Baloo Da 2', cursive;
+    ;
+}
+
+#attend h3 {
+    font-family: 'Baloo Da 2', cursive;
+    ;
+}
+
+
+/*
+#attend table {
+    border-collapse: collapse;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .03) ;
+    border-radius: 10px;
+    margin: auto;
+    border-radius:10px;
+}
+
+#attend table th,td{
+  border: 1px solid grey;
+	padding: 8px 30px;
+	text-align: center;
+} */
+
+
+/* css hover login button */
+/* .login ul li{
+  float:left;
+  background-color:black;
+  color:white;
+  width: 80px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  list-style: none;
+  opacity: .7;
+  transition: .8s;
+}
+.login ul li ul{
+  display: none;
+}
+.login ul li:hover > ul{
+  display: block;
+  
+}  */
+
+#aboutimg {
+    width: 100%;
+    height: 45vh;
+}
+
+#welcome {
+    /* margin-top:2%;  */
+    background: orange;
+}
